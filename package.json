@@ -1,0 +1,59 @@
+{
+  "name": "@sartodev/vite-plugin-tsgo-checker",
+  "version": "0.0.1",
+  "description": "Vite plugin that type-checks with tsgo (TypeScript 7) and lints with Oxlint, with a browser overlay and formatted terminal output.",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "tsgo",
+    "typescript-go",
+    "oxlint",
+    "checker",
+    "overlay"
+  ],
+  "license": "ISC",
+  "author": "SartoDev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SartoDev/vite-plugin-tsgo-checker.git"
+  },
+  "homepage": "https://github.com/SartoDev/vite-plugin-tsgo-checker#readme",
+  "bugs": {
+    "url": "https://github.com/SartoDev/vite-plugin-tsgo-checker/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsgo",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@typescript/native-preview": "*",
+    "oxlint": ">=1",
+    "vite": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "oxlint": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "vite": "^6.4.3"
+  }
+}
